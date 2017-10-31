@@ -14,7 +14,7 @@ tldr: An example Rmd notebook for drawing a triangle
 Let's build a simple triangle:
 
 ```{r}
-require('ggplot2')
+suppressPackageStartupMessages(library('ggplot2'))
 
 peak <- 10
 data <- data.frame(x=0:(2*peak))
