@@ -1,0 +1,23 @@
+---
+title: Draw triangles with Rmd
+authors:
+- :harter
+tags:
+- example
+created_at: 2017-10-31
+updated_at: 2017-10-31
+tldr: An example Rmd notebook for drawing a triangle
+---
+
+# Triangles
+
+Let's build a simple triangle:
+
+```{r}
+require('ggplot2')
+
+peak <- 10
+data <- data.frame(x=0:(2*peak))
+data$y <- pmin(data$x, 2*peak - data$x)
+ggplot(data, aes(x=x, y=y)) + geom_line()
+```
